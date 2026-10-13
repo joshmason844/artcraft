@@ -30,6 +30,9 @@ jobs:
       - name: install Rust stable
         uses: dtolnay/rust-toolchain@stable
 
+      - name: cache Rust builds (reuses the last build, much faster)
+        uses: Swatinem/rust-cache@v2
+
       - name: install wreq dependencies
         run: |
           choco install cmake -y
@@ -43,6 +46,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: lts/*
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
 
       - name: install frontend dependencies
         run: |
