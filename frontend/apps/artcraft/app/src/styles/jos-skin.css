@@ -1,0 +1,96 @@
+/* ===================== J·OS SKIN =====================
+   Josh's build of ArtCraft, dressed like his board and J·OS:
+   navy circuit board, trace blue, brass, silkscreen grey,
+   Rajdhani headings and IBM Plex Mono labels.
+   Loaded after base.css, so it only overrides. The light theme is untouched. */
+
+:root:not(.theme-light) {
+  --jos-board: #071129;
+  --jos-chip: #0a1328;
+  --jos-dark: #0b1530;
+  --jos-trace: #16b4ff;
+  --jos-trace-rgb: 22 180 255;
+  --jos-brass: #e2b766;
+  --jos-silk: #9fb4cc;
+  --jos-ink: #eaf3ff;
+
+  --st-bg: var(--jos-board);
+  --st-panel: #08132e;
+  --st-panel-border: rgba(22, 180, 255, 0.22);
+  --st-modal: #08132e;
+  --st-controls: var(--jos-dark);
+  --st-controls-rgb: 11 21 48;
+  --st-controls-border: rgba(22, 180, 255, 0.28);
+  --st-sunken: #040a1a;
+  --st-fg: var(--jos-ink);
+  --st-fg-rgb: 234 243 255;
+  --st-divider: rgba(159, 180, 204, 0.18);
+
+  --background: 223 71% 9%;
+  --foreground: 213 100% 96%;
+  --card: 222 70% 10%;
+  --card-foreground: 213 100% 96%;
+  --popover: 222 70% 10%;
+  --popover-foreground: 213 100% 96%;
+  --primary: 199 100% 54%;
+  --primary-foreground: 223 71% 9%;
+  --secondary: 224 63% 12%;
+  --secondary-foreground: 213 100% 96%;
+  --muted: 224 63% 12%;
+  --muted-foreground: 212 30% 71%;
+  --accent: 39 68% 64%;
+  --accent-foreground: 223 71% 9%;
+  --border: 199 100% 54% / 0.22;
+  --input: 199 100% 54% / 0.28;
+  --ring: 39 68% 64%;
+}
+
+/* the board itself: a faint silkscreen grid behind everything */
+:root:not(.theme-light) body {
+  background-color: var(--jos-board);
+  background-image:
+    linear-gradient(rgba(22, 180, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(22, 180, 255, 0.045) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* headings in Rajdhani, like the chip labels */
+:root:not(.theme-light) h1,
+:root:not(.theme-light) h2,
+:root:not(.theme-light) .font-display {
+  font-family: Rajdhani, "Arial Narrow", Archivo, sans-serif;
+  font-stretch: normal;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* HUD labels read like silkscreen */
+:root:not(.theme-light) .hud-label {
+  font-family: "IBM Plex Mono", "Geist Mono", ui-monospace, monospace;
+  color: var(--jos-silk);
+}
+
+:root:not(.theme-light) ::selection {
+  background: var(--jos-trace);
+  color: var(--jos-board);
+}
+
+:root:not(.theme-light) :focus-visible {
+  outline: 2px solid var(--jos-brass);
+  outline-offset: 3px;
+}
+
+/* primary buttons glow like a live trace */
+:root:not(.theme-light) .bg-primary,
+:root:not(.theme-light) .bg-primary-500,
+:root:not(.theme-light) .bg-brand-primary {
+  box-shadow: 0 0 0 1px rgba(22, 180, 255, 0.55), 0 0 18px rgba(22, 180, 255, 0.28);
+}
+
+/* thin trace-blue scrollbars */
+:root:not(.theme-light) ::-webkit-scrollbar-thumb {
+  background: rgba(22, 180, 255, 0.35);
+}
+:root:not(.theme-light) ::-webkit-scrollbar-thumb:hover {
+  background: var(--jos-trace);
+}

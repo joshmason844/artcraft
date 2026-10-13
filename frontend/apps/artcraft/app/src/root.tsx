@@ -12,6 +12,7 @@ import {
 import normalizeCss from "./styles/normalize.css?url";
 import tailwindCss from "./styles/tailwind.css?url";
 import baseCss from "./styles/base.css?url";
+import josSkinCss from "./styles/jos-skin.css?url";
 //import { api } from "@storyteller/api";
 
 export const links: LinksFunction = () => [
@@ -26,6 +27,10 @@ export const links: LinksFunction = () => [
   {
     rel: "stylesheet",
     href: baseCss,
+  },
+  {
+    rel: "stylesheet",
+    href: josSkinCss,
   },
   {
     rel: "preconnect",

@@ -7,6 +7,7 @@ import { createRoot } from "react-dom/client";
 import "./styles/normalize.css";
 import "./styles/tailwind.css";
 import "./styles/base.css";
+import "./styles/jos-skin.css";
 import EnvironmentVariables from "~/Classes/EnvironmentVariables";
 import { pageHeight, pageWidth, persistLogin } from "~/signals";
 import { SyncStorytellerApiConfig } from "./api/SyncStorytellerApiConfig";

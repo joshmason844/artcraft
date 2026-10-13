@@ -6,6 +6,7 @@ on:
       - release
       - artcraft-release
       - artcraft-windows  # Additional branch for Windows testing
+      - jos-skin  # Josh's J-OS styled build
 
 # This workflow creates Windows builds.
 # On each push to the release branches it will create or update a GitHub release, build your app, and upload the artifacts to the release.

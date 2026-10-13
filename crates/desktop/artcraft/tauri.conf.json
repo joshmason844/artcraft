@@ -1,8 +1,8 @@
 {
   "$schema": "https://schema.tauri.app/config/2.0.0-rc",
-  "productName": "ArtCraft",
+  "productName": "ArtCraft JOS",
   "version": "0.42.0",
-  "identifier": "ai.artcraft.app",
+  "identifier": "ai.artcraft.app.jos",
   "build": {
     "frontendDist": "../../../frontend/apps/artcraft/dist",
     "devUrl": "http://localhost:5173",
